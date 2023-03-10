@@ -1,0 +1,41 @@
+@import "../Utilities/utilities.scss";
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    // width: max-content;
+    align-items: center;
+    padding: .4rem 3rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+
+    @include respond(phone) {
+        padding: 1rem 2rem;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        color: $text-color;
+
+        >* {
+            border-bottom: .1rem solid $text-color;
+            margin-left: .5rem;
+            // padding:.5rem 1rem;
+        }
+    }
+
+    .logo {
+
+        h3 {
+            margin: 0;
+        }
+    }
+}
+
+.footer {
+    background-color: darken($bg-color, $amount: 5);
+}
